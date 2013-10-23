@@ -1,0 +1,18 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+				xmlns:f="http://java.sun.com/jsf/core"
+				xmlns:h="http://java.sun.com/jsf/html"
+				xmlns:ui="http://java.sun.com/jsf/facelets"
+				xmlns:p="http://primefaces.org/ui"
+				template="/template/main.xhtml">
+
+	<ui:define name="body">
+		<p:panel>
+			Obtendo o valor de um atributo em um ManagedBean:<br />
+			indexMB.getNome()=#{indexMB.nome}<br /><br />
+			Tentando obter o valor de um atributo em uma classe anotada com @Configuration:<br />
+			environmentConfig.getTeste()=#{environmentConfig.teste}<br />
+			environmentConfig.isTestable()=#{environmentConfig.testable}<br /><br />
+			Apesar da anotação @Configuration estar anotada com @Named não é possível obter o valor do parametro "teste"...
+		</p:panel>
+	</ui:define>
+</ui:composition>
